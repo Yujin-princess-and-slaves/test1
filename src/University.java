@@ -1,11 +1,20 @@
 package src;
 
-public class University {
-    public static String universityName;
-    public static String department;
+import java.util.ArrayList;
 
-    public void universityResult(String universityName, String department){
-        System.out.printf("지원대학교: %s\n지원학과: %s\n", universityName, department);
+public class University {
+    String school;
+    String department;
+
+    public University(String sc, String d){
+        school=sc;
+        department=d;
+    }
+    public void setSchool(String sc){
+        school=sc;
+    }
+    public void setDepartment(String d){
+        department=d;
     }
 
 }
