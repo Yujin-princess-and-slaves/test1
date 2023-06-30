@@ -1,24 +1,17 @@
 package src;
 
-import java.util.Scanner;
-
-import static src.Student.*;
-import static src.University.department;
-import static src.University.universityName;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        universityName = sc.next();
-        University.department = sc.next();
-        name = sc.next();
-        score = sc.nextInt();
-        check = sc.nextInt();
-        Student.point = sc.nextInt();
+        ArrayList<student> students = new ArrayList<student>();
+        students.add(new student("김땡땡",100,100,10,"070311-3"));
+        students.add(new student("이땡떙",90,90,5,"070312-1"));
 
-        University university = new University(); // university 객체 생성
-        university.universityResult(universityName, department); // universityResult 메서드 호출
-        Student student = new Student(); // Student 객체 생성
-        student.studentResult(name, score, check, point); // studentResult 메서드 호출
+        for(student item:students){
+            System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"),item.name,item.score,item.check,item.point,item.number));
+        }
+        System.out.println();
+
     }
 }
