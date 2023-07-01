@@ -12,8 +12,20 @@ public class student {
         this.point=p;
         this.number=num;
     }
+    public String getName() {
+        return name;
+    }
     public int getScore() {
         return score;
+    }
+    public int getCheck() {
+        return check;
+    }
+    public int getPoint() {
+        return point;
+    }
+    public String getNumber() {
+        return number;
     }
 
 }

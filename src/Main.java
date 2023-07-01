@@ -46,6 +46,31 @@ public class Main {
                             }
                         }
                     }
+                    else if (uni.getDepartment()!=(uni2.getDepartment())) {
+                        boolean foundInUni2 = false;
+
+                        for (University univ2 : universities2) {
+                            if (univ2.getDepartment().equals(uni.getDepartment())) {
+                                foundInUni2 = true;
+                                break;
+                            }
+                        }
+
+                        if (!foundInUni2) {
+                            System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), uni.school, uni.department));
+
+                            for (student stu : students) {
+                                System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), stu.getName(), stu.getScore(), stu.getCheck(), stu.getPoint(), stu.getNumber()));
+                            }
+                        }
+                        else{
+                            System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), uni2.school, uni2.department));
+
+                            for (student stu2 : students2) {
+                                System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), stu2.getName(), stu2.getScore(), stu2.getCheck(), stu2.getPoint(), stu2.getNumber()));
+                            }
+                        }
+                    }
                 }
             }
         }
