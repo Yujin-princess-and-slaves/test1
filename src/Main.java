@@ -31,7 +31,12 @@ public class Main {
                 if (uni.getSchool().equals(uni2.getSchool())) {
                     if (uni.getDepartment().equals(uni2.getDepartment())) {
                         System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), uni.school, uni.department));
-                        System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), uni2.school, uni2.department));
+                        for(student st : students) {
+                            System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st.name,st.score,st.check,st.point,st.number));
+                        }
+                        for(student st2 : students2) {
+                            System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st2.name,st2.score,st2.check,st2.point,st2.number));
+                        }
                         System.out.println();
                     }
                 }
