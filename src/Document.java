@@ -1,6 +1,6 @@
 package src;
 
-public class Document {
+public class Document implements Comparable<Document>{
     private String name;
 
     private int grade;
@@ -49,5 +49,23 @@ public class Document {
 
     public String getWantDepartment(){
         return wantDepartment;
+    }
+
+    public boolean getPass(){
+        return pass;
+    }
+
+    public void setPass(boolean pass) {
+        this.pass = pass;
+    }
+
+    @Override
+    public int compareTo(Document document){
+        if(document.total<total){
+            return 1;
+        } else if (document.total > total){
+            return -1;
+        }
+        return 0;
     }
 }

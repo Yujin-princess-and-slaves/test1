@@ -16,42 +16,42 @@ public class Main {
         Student yujin = new Student("전유진");
 
         /*학생 정홍섭의 대학교 6개의 원서작성*/
-        honsub.writeDocument(450, 30, 20, "서울대학교", "");
+        honsub.writeDocument(250, 30, 20, "서울대학교", "");
         honsub.sendDocument(seoul);
 
-        honsub.writeDocument(450, 30, 20, "연세대학교", "");
-        honsub.sendDocument(gyeongbuk);
-
-        honsub.writeDocument(450, 30, 20, "고려대학교", "");
-        honsub.sendDocument(sungkyun);
-
-        honsub.writeDocument(450, 30, 20, "부산대학교", "");
+        honsub.writeDocument(250, 30, 20, "연세대학교", "");
         honsub.sendDocument(yonsei);
 
-        honsub.writeDocument(450, 30, 20, "경북대학교", "");
-        honsub.sendDocument(busan);
-
-        honsub.writeDocument(450, 30, 20, "성균관대학교", "");
+        honsub.writeDocument(250, 30, 20, "고려대학교", "");
         honsub.sendDocument(korea);
 
+        honsub.writeDocument(250, 30, 20, "부산대학교", "");
+        honsub.sendDocument(busan);
+
+        honsub.writeDocument(250, 30, 20, "경북대학교", "");
+        honsub.sendDocument(gyeongbuk);
+
+        honsub.writeDocument(250, 30, 20, "성균관대학교", "");
+        honsub.sendDocument(sungkyun);
+
         /*학생 전유진의 대학교 6개의 원서작성*/
-        yujin.writeDocument(350, 30, 15, "서울대학교", "");
-        yujin.sendDocument(yonsei);
+        yujin.writeDocument(350, 30, 15, "경북대학교", "");
+        yujin.sendDocument(gyeongbuk);
 
         yujin.writeDocument(350, 30, 15, "연세대학교", "");
-        yujin.sendDocument(korea);
+        yujin.sendDocument(yonsei);
 
         yujin.writeDocument(350, 30, 15, "고려대학교", "");
-        yujin.sendDocument(middle);
+        yujin.sendDocument(korea);
 
         yujin.writeDocument(350, 30, 15, "중앙대학교", "");
-        yujin.sendDocument(konkuk);
+        yujin.sendDocument(middle);
 
         yujin.writeDocument(350, 30, 15, "건국대학교", "");
-        yujin.sendDocument(sungkyun);
+        yujin.sendDocument(konkuk);
 
         yujin.writeDocument(350, 30, 15, "서울대학교", "");
-        yujin.sendDocument(gyeongbuk);
+        yujin.sendDocument(seoul);
 
         /*정홍섭의 학교 원서 재체출*/
         honsub.writeDocument(450, 30, 20, "서울대학교", "");
@@ -66,6 +66,17 @@ public class Main {
         konkuk.readDocuments();
         middle.readDocuments();
         sungkyun.readDocuments();
+
+
+        /*합불여부*/
+        seoul.passFail();
+        gyeongbuk.passFail();
+        yonsei.passFail();
+        korea.passFail();
+        busan.passFail();
+        konkuk.passFail();
+        middle.passFail();
+        sungkyun.passFail();
 
 
     }
