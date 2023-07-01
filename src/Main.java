@@ -41,6 +41,6 @@ public class Main {
         yonsei.viewApplication();
         korea.viewApplication();
 
-        jaehyeon.checkPass();
+//        jaehyeon.checkPass();
     }
 }
