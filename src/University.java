@@ -7,14 +7,7 @@ public class University {
     String department;
 
     public University(String sc, String d){
-        school=sc;
-        department=d;
+            school=sc;
+            department=d;
     }
-    public void setSchool(String sc){
-        school=sc;
-    }
-    public void setDepartment(String d){
-        department=d;
-    }
-
 }

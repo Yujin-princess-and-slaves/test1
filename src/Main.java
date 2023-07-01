@@ -1,30 +1,41 @@
 package src;
-
 import java.util.ArrayList;
-
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ArrayList<student> students = new ArrayList<student>();
-        students.add(new student("김땡땡",100,100,10,"070311-3"));
-        students.add(new student("이땡떙",90,90,5,"070312-1"));
+        students.add(new student("김땡땡", 100, 100, 10, "070311-3"));
 
-        for(student item:students){
-            System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"),item.name,item.score,item.check,item.point,item.number));
+        ArrayList<University> universities = new ArrayList<University>();
+        universities.add(new University("원대학교", "컴퓨터공학과"));
+        universities.add(new University("원대학교", "컴퓨터과학과"));
+        universities.add(new University("네모대학교", "컴퓨터공학과"));
+        universities.add(new University("네모대학교", "컴퓨터과학과"));
+        universities.add(new University("세모대학교", "사회복지학과"));
+        universities.add(new University("세모대학교", "컴퓨터과학과"));
+
+        for (student st : students) {
+            for (University u : universities) {
+                System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st.name, st.score, st.check, st.point, st.number));
+                System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), u.school, u.department));
+            }
         }
         System.out.println();
 
-        ArrayList<University> universities = new ArrayList<University>();
-        universities.add(new University("원대학교","컴퓨터공학과"));
-        universities.add(new University("원대학교","컴퓨터과학과"));
-        universities.add(new University("네모대학교","컴퓨터공학과"));
-        universities.add(new University("네모대학교","컴퓨터과학과"));
-        universities.add(new University("세모대학교","사회복지학과"));
-        universities.add(new University("세모대학교","컴퓨터과학과"));
+        ArrayList<student> students2 = new ArrayList<student>();
+        students2.add(new student("이땡땡", 90, 80, 10, "070511-2"));
 
-        for(student st:students) {
-            for (University u : universities){
-                System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n지원대학:%s\n지원학과:%s\n"),st.name,st.score,st.check,st.point,st.number,u.school, u.department));
-                System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), u.school, u.department));
+        ArrayList<University> universities2 = new ArrayList<University>();
+        universities2.add(new University("원대학교", "경영학과"));
+        universities2.add(new University("원대학교", "컴퓨터과학과"));
+        universities2.add(new University("네모대학교", "컴퓨터공학과"));
+        universities2.add(new University("네모대학교", "교육학과"));
+        universities2.add(new University("세모대학교", "사회복지학과"));
+        universities2.add(new University("세모대학교", "건축학과"));
+
+        for (student st2 : students2) {
+            for (University u2 : universities2) {
+                System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st2.name, st2.score, st2.check, st2.point, st2.number));
+                System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), u2.school, u2.department));
             }
         }
         System.out.println();
