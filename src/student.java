@@ -12,4 +12,8 @@ public class student {
         this.point=p;
         this.number=num;
     }
+    public int getScore() {
+        return score;
+    }
+
 }

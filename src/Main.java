@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<student> students = new ArrayList<student>();
-        students.add(new student("김땡땡", 100, 100, 10, "070311-3"));
+        students.add(new student("김땡땡", 70, 100, 10, "070311-3"));
 
         ArrayList<University> universities = new ArrayList<University>();
         universities.add(new University("원대학교", "컴퓨터공학과"));
@@ -16,7 +16,7 @@ public class Main {
         universities.add(new University("세모대학교", "컴퓨터과학과"));
 
         ArrayList<student> students2 = new ArrayList<student>();
-        students2.add(new student("이땡땡", 90, 80, 10, "070511-2"));
+        students2.add(new student("이땡땡", 100, 80, 10, "070511-2"));
 
         ArrayList<University> universities2 = new ArrayList<University>();
         universities2.add(new University("원대학교", "경영학과"));
@@ -32,12 +32,19 @@ public class Main {
                     if (uni.getDepartment().equals(uni2.getDepartment())) {
                         System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), uni.school, uni.department));
                         for(student st : students) {
-                            System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st.name,st.score,st.check,st.point,st.number));
+                            for(student st2 : students2) {
+                                if(st.getScore()>st2.getScore()){
+                                    System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st.name,st.score,st.check,st.point,st.number));
+                                    System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st2.name,st2.score,st2.check,st2.point,st2.number));
+                                    System.out.println();
+                                }
+                                else{
+                                    System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st2.name,st2.score,st2.check,st2.point,st2.number));
+                                    System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st.name,st.score,st.check,st.point,st.number));
+                                    System.out.println();
+                                }
+                            }
                         }
-                        for(student st2 : students2) {
-                            System.out.println(String.format(("이름:%s\n성적:%d\n출결:%d\n가산점:%d\n주민등록번호:%s\n"), st2.name,st2.score,st2.check,st2.point,st2.number));
-                        }
-                        System.out.println();
                     }
                 }
             }
