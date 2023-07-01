@@ -29,9 +29,11 @@ public class Main {
         for (University uni : universities) {
             for (University uni2 : universities2) {
                 if (uni.getSchool().equals(uni2.getSchool())) {
-                    System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), uni.school, uni.department));
-                    System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), uni2.school, uni2.department));
-                    System.out.println();
+                    if (uni.getDepartment().equals(uni2.getDepartment())) {
+                        System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), uni.school, uni.department));
+                        System.out.println(String.format(("지원대학:%s\n지원학과:%s\n"), uni2.school, uni2.department));
+                        System.out.println();
+                    }
                 }
             }
         }
