@@ -3,6 +3,7 @@ package src;
 public class Application implements Comparable<Application>{
     String name, residentRegistrationNumber, department_applied;
     int standardScore, attendence, extraPoint, total;
+    boolean pass;
 
     public void saveApplication(String name, String residentRegistrationNumber, int standardScore, int attendence, int extraPoint, College college, String department_applied){
         this.name = name;
@@ -41,6 +42,10 @@ public class Application implements Comparable<Application>{
     public int getTotal() {
         return total;
     }
+
+    public void setPass(boolean pass) { this.pass = pass; }
+
+    public boolean isPass() { return pass; }
 
     @Override
     public int compareTo(Application o) {

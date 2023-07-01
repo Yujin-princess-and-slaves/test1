@@ -25,6 +25,14 @@ public class Main {
         jaehyeon.writeApplication(yonsei, "경영학과");
         jaehyeon.writeApplication(korea, "기계공학과");
 
+        yujin.writeApplication(snu, "컴퓨터공학과");
+        yujin.writeApplication(snu, "의예과");
+        yujin.writeApplication(snu, "건축학과");
+        yujin.writeApplication(yonsei, "신소재공학과");
+        yujin.writeApplication(yonsei, "시스템반도체공학과");
+        yujin.writeApplication(yonsei, "경영학과");
+        yujin.writeApplication(korea, "기계공학과");
+
 //        hongsub.writeApplication(yonsei, "시스템반도체공학과");
 //        yujin.writeApplication(snu, "컴퓨터공학과");
 //        jaehyeon.writeApplication(snu, "의예과");
@@ -32,5 +40,7 @@ public class Main {
         snu.viewApplication();
         yonsei.viewApplication();
         korea.viewApplication();
+
+        jaehyeon.checkPass();
     }
 }
